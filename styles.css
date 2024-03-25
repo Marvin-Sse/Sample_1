@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
     --dark-colour: #1d1d1d;
@@ -28,13 +28,17 @@
 
 img {
     display: block;
-  }
+}
 
-  .nowrap {
+button {
+    cursor: pointer;
+}
+
+.nowrap {
     white-space: nowrap;
-  }
+}
 
-  body {
+body {
     width: 100vw;
     height: 95vh;
     font-family: "Poppins", sans-serif;
@@ -46,7 +50,7 @@ img {
     width: 95%;
     height: 100%;
     display: flex;
-    flex-flow: row nowrap;   
+    flex-flow: row nowrap;
     position: relative;
 }
 
@@ -59,7 +63,6 @@ img {
 .container_left_cover {
     width: 100%;
     height: 100%;
-    
 }
 
 .container_left_cover img {
@@ -83,7 +86,7 @@ img {
 }
 
 /* || left main */
-.container_left_main_pointer  {
+.container_left_main_pointer {
     position: absolute;
 }
 
@@ -100,7 +103,8 @@ img {
     left: 10vw;
 }
 
-.tag, .tag-background {
+.tag,
+.tag-background {
     display: grid;
     place-content: center;
 }
@@ -125,7 +129,8 @@ img {
     position: relative;
 }
 
-.tag-line, .tag-line::after {
+.tag-line,
+.tag-line::after {
     width: 7px;
     height: 1.5px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -161,24 +166,24 @@ img {
     display: none;
     transform-origin: right;
     animation: showtag 0.3s ease-in normal forwards;
-  }
+}
 
-  @keyframes showtag {
+@keyframes showtag {
     0% {
-      transform: scaleY(0);
+        transform: scaleY(0);
     }
 
     80% {
-      transform: scaleY(1.1);
+        transform: scaleY(1.1);
     }
 
     100% {
-      transform: scaleY(1);
+        transform: scaleY(1);
     }
-} 
+}
 
 :is(.container_left_main_pointer):hover .tag-description,
-:is(.container_left_main_pointer):hover .connect{
+:is(.container_left_main_pointer):hover .connect {
     display: block;
 }
 
@@ -201,14 +206,14 @@ img {
     width: 55%;
     height: 15vh;
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     /* padding-left: 2vw; */
     display: flex;
 
     border: 1px solid red;
 }
 
-.container_left_footer>div {
+.container_left_footer > div {
     height: 100%;
     width: 50%;
     padding: 1rem 30px;
@@ -223,17 +228,19 @@ img {
     align-items: center;
     gap: 1em;
     font-size: var(--fontsize-s);
-
 }
 
-.container_left_footer_description svg {height: 70%; width: 15%;}
+.container_left_footer_description svg {
+    height: 70%;
+    width: 15%;
+}
 
-.container_left_footer_description:hover, 
+.container_left_footer_description:hover,
 .container_left_footer_description:focus-within {
     color: aqua;
 }
 
-:is(.container_left_footer_description:hover) svg{
+:is(.container_left_footer_description:hover) svg {
     transform: rotateZ(45deg);
     transition: all 0.3s ease-in-out;
 }
@@ -290,28 +297,37 @@ img {
     height: 40%;
 }
 
+.container_left_footer_right {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .container_left_footer_btn button {
-    width: 125px; 
+    width: 125px;
     height: 25px;
     background: transparent;
     border: 1px solid var(--white);
     border-radius: 17px;
-    padding: 10px;
+    padding: 10px 5px;
     color: var(--white);
     font-size: var(--fontsize-n);
     position: relative;
     isolation: isolate;
-    
+
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
+}
+
+.container_left_footer_btn svg {
+    margin-top: 2px;
 }
 
 .container_left_footer_btn button::after,
 .container_left_footer_btn button::before {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     background-color: var(--blue);
     border-radius: 50%;
     position: absolute;
@@ -326,10 +342,13 @@ img {
     z-index: -1;
 }
 
+:is(.container_left_footer_btn button:hover) svg {
+    transform: rotateZ(45deg);
+    transition: all 0.3s ease-out;
+}
+
 .container_right {
     width: 45%;
     height: 100%;
     border: 1px solid red;
 }
-
-
