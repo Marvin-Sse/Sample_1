@@ -12,12 +12,11 @@
     --padding-s: 10px;
     --padding-l: 30px;
     --margin: 20px;
-    --margin-s: 1vh;
     --margin-s: 10px;
-    --fontsize-s: 10px;
+    --fontsize-s: 12px;
     --fontsize-xs: 10px;
     --fontsize-xxs: 8px;
-    --fontsize-n: 16px;
+    --fontsize-n: 14px;
     --fontsize-l: 20px;
     --fontsize-xl: 36px;
     --fontsize-xxl: 56px;
@@ -246,7 +245,7 @@ body {
 }
 
 .container_left_footer_credit {
-    width: 95%;
+    width: clamp(85%, 10rem, 9vw);
     min-width: 15rem;
     height: 2.5rem;
     border: 1px solid var(--white);
@@ -306,68 +305,14 @@ body {
 }
 
 .container_left_footer_btn {
-    width: 125px;
+    width: 120px;
     height: 25px;
     margin-top: 10px;
 }
 
 .container_left_footer_btn button {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 1px solid var(--white);
-    border-radius: 17px;
-    padding: 10px 5px;
     color: var(--white);
-    font-size: var(--fontsize-n);
-    position: relative;
-    isolation: isolate;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.4s;
-}
-
-.container_left_footer_btn svg {
-    margin-top: 2px;
-}
-
-.container_left_footer_btn button::after,
-.container_left_footer_btn button::before {
-    content: "";
-    width: 17px;
-    height: 17px;
-    background-color: var(--blue-light);
-    border-radius: 50%;
-    position: absolute;
-    right: 5px;
-    transition: all 0.4s;
-}
-
-.container_left_footer_btn button::after {
-    z-index: -2;
-}
-
-.container_left_footer_btn button::before {
-    z-index: -1;
-}
-
-.container_left_footer_btn button:hover svg {
-    transform: rotateZ(45deg);
-    transition: all 0.4s ease-out;
-}
-
-.container_left_footer_btn:hover button::before {
-    right: 0;
-    transform: scaleY(1.1);
-}
-
-.container_left_footer_btn:hover button::after {
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
+    border: 1px solid var(--white);
 }
 
 .container_left_footer_text {
@@ -379,5 +324,98 @@ body {
 .container_right {
     width: 45%;
     height: 100%;
-    border: 1px solid red;
 }
+
+.container_right_header {
+    color: var(--dark-colour);
+    width: 100%;
+    height: 10%;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+}
+
+.container_right_header a {
+    color: inherit;
+    font-size: var(--fontsize-n);
+    text-decoration: none;
+    display: inline-block;
+    margin-right: clamp(0.5rem, 1vw, 2.5rem);
+    position: relative;
+}
+
+.container_right_header button {
+    border: 1px solid var(--dark-colour);
+    width: 95px;
+}
+
+.container_right_main {
+    width: 100%;
+    height: 70%;
+    border: 1px solid greenyellow;
+}
+
+.container_right_footer {
+    width: 100%;
+    height: 20%;
+    border: 1px solid rebeccapurple;
+}
+
+/*||All Button Styles*/
+button {
+    width: 120px;
+    height: 25px;
+    background: transparent;
+    border-radius: 17px;
+    padding: 10px 5px;
+    font-size: var(--fontsize-n);
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s;
+}
+
+button::after,
+button::before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-color: var(--blue-light);
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    transition: all 0.4s;
+}
+
+button::after {
+    z-index: -2;
+}
+
+button::before {
+    z-index: -1;
+}
+
+button:hover svg {
+    transform: rotateZ(45deg);
+    transition: all 0.4s ease-out;
+}
+
+button:hover::before {
+    right: 0;
+    transform: scaleY(1.1);
+}
+
+button:hover::after {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+}
+
+button svg {
+    margin-top: 2px;
+}
+/* End all Button styles */
