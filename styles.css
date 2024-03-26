@@ -14,13 +14,13 @@
     --padding-s: 10px;
     --padding-l: 30px;
     --margin: 20px;
-    --margin-s: 10px;
-    --fontsize-s: 12px;
+    --margin-s: 11px;
+    --fontsize-s: 14px;
     --fontsize-xs: 10px;
     --fontsize-xxs: 8px;
     --fontsize-xxxs: 7px;
-    --fontsize-n: 14px;
-    --fontsize-l: 16px;
+    --fontsize-n: 15px;
+    --fontsize-l: 18px;
     --fontsize-xl: 36px;
     --fontsize-xxl: 56px;
 }
@@ -48,6 +48,7 @@ body {
     height: 95vh;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    background-color: #e2e5e5;
 }
 
 .container {
@@ -59,6 +60,13 @@ body {
     position: relative;
 }
 
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffffb9, #c9c8c88a, #ffffffb9);
+}
+
+/* || Start left main */
 .container_left {
     width: 55%;
     height: 100%;
@@ -90,7 +98,6 @@ body {
     font-size: var(--fontsize-s);
 }
 
-/* || left main */
 .container_left_main_pointer {
     position: absolute;
 }
@@ -323,10 +330,14 @@ body {
     height: auto;
     font-size: var(--fontsize-s);
 }
+/* || End left main styles */
 
+/* || Start Right main styles */
 .container_right {
     width: 45%;
     height: 100%;
+    background-color: var(--white);
+    border-radius: 0 5px 5px 0;
 }
 
 .container_right_header {
@@ -354,11 +365,10 @@ body {
 
 .container_right_main {
     width: 100%;
-    height: 80%;
-    border: 1px solid greenyellow;
+    height: 85%;
 }
 
-.right_main-heading h1 {
+.right_main_heading h1 {
     text-align: center;
     font-family: "Gugi", sans-serif;
     padding: 20px 30px;
@@ -367,16 +377,76 @@ body {
 
 .container_right_footer {
     width: 100%;
-    height: 15%;
+    height: 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
 }
 
+.right_main_cover {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.right_main_cover img {
+    position: absolute;
+    object-fit: cover;
+    top: 5%;
+    left: 30%;
+    width: 60%;
+}
+
+.right_main_content2 {
+    padding: var(--padding-l);
+    margin-top: clamp(0, 1rem, 4rem);
+}
+
+.right_main_content2 h2 {
+    font-weight: 800;
+    font-size: var(--fontsize-l);
+}
+
+.right_main_content p {
+    font-size: var(--fontsize-n);
+}
+
+.inner_content h2 {
+    font-weight: 500;
+    font-size: var(--fontsize-n);
+}
+
+.inner_content p {
+    font-size: var(--fontsize-s);
+}
+
+.right_main_cover .inner_content {
+    position: absolute;
+    padding: var(--padding-s);
+}
+
+.right_main_cover .left {
+    width: 35%;
+    left: 20px;
+    top: 20px;
+}
+
+.right_main_cover .bottom {
+    width: 35%;
+    top: 65%;
+    left: 20px;
+}
+
+.right_main_cover .right {
+    width: 35%;
+    right: 20px;
+    top: 20px;
+}
+
 .container_right_footer button {
     border: 1px solid var(--dark-colour);
-    width: 140px;
+    width: 150px;
     height: 30px;
     font-size: var(--fontsize-l);
 }
@@ -403,8 +473,9 @@ body {
     left: 50%;
     transform-origin: 0 30px;
 }
+/* || End Right main styles */
 
-/*||All Button Styles*/
+/*|| All Button Styles*/
 button {
     width: 120px;
     height: 25px;
