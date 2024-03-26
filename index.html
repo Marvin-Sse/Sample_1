@@ -148,6 +148,7 @@
             </div>
         </div>
         <div class="container_right">
+
             <div class="container_right_header">
                 <div class="container_right_header_links">
                     <a href="#">Home</a>
@@ -166,9 +167,39 @@
                     </button>
                 </div>
             </div>
-            <div class="container_right_main"></div>
-            <div class="container_right_footer"></div>
+
+            <div class="container_right_main">
+                <div class="right_main-heading">
+                    <h1>DESIGN MORDERN AD VIVENTIUM PER MOI</h1>
+                </div>
+            </div>
+
+            <div class="container_right_footer">
+                <div class="container_right_footer_button">
+                    <button type="button">
+                        <span>nobis loquere</span> 
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                              </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="container_right_footer_txt">
+                    <div class="right_footer_txt_container">
+                        <div class="right_footer_txt">
+                            <p>subscribunt num. ducta Marvin Ssenyonga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        const text = document.querySelector('.right_footer_txt p');
+        text.innerHTML = text.innerText.split('').map(
+            (char, i) => `<span style="transform:rotate(${i * 8.3}deg)">${char}</span>`
+        ).join('');
+    </script>
 </body>
 </html>

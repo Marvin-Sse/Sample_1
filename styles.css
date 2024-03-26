@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+
 :root {
     --dark-colour: #1d1d1d;
     --dark-colour-light: #2424248c;
@@ -16,8 +18,9 @@
     --fontsize-s: 12px;
     --fontsize-xs: 10px;
     --fontsize-xxs: 8px;
+    --fontsize-xxxs: 7px;
     --fontsize-n: 14px;
-    --fontsize-l: 20px;
+    --fontsize-l: 16px;
     --fontsize-xl: 36px;
     --fontsize-xxl: 56px;
 }
@@ -329,11 +332,10 @@ body {
 .container_right_header {
     color: var(--dark-colour);
     width: 100%;
-    height: 10%;
+    height: 5%;
     padding: 10px 25px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid;
 }
 
 .container_right_header a {
@@ -352,14 +354,54 @@ body {
 
 .container_right_main {
     width: 100%;
-    height: 70%;
+    height: 80%;
     border: 1px solid greenyellow;
+}
+
+.right_main-heading h1 {
+    text-align: center;
+    font-family: "Gugi", sans-serif;
+    padding: 20px 30px;
+    font-size: var(--fontsize-xl);
 }
 
 .container_right_footer {
     width: 100%;
-    height: 20%;
-    border: 1px solid rebeccapurple;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.container_right_footer button {
+    border: 1px solid var(--dark-colour);
+    width: 140px;
+    height: 30px;
+    font-size: var(--fontsize-l);
+}
+
+.right_footer_txt_container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.right_footer_txt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: var(--fontsize-xxxs);
+}
+
+.right_footer_txt span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 30px;
 }
 
 /*||All Button Styles*/
